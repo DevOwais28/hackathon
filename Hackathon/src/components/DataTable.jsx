@@ -68,13 +68,17 @@ export function DataTable() {
               <TableCell>{task.status}</TableCell>
               <TableCell className="text-white flex items-center justify-center">
                 <CheckCircle
-                  onClick={async () => {
-                    const taskRef = doc(db, "tasks", task.id);
-                    await updateDoc(taskRef, { status: "completed" });
-                    toast.success("Task marked as completed!");
-                  }}
-                  className="text-green-500 cursor-pointer"
-                />
+  onClick={async (e) => {
+    // Disable further clicks visually & functionally
+    e.currentTarget.style.pointerEvents = "none";
+    e.currentTarget.style.opacity = "0.5";
+
+    const taskRef = doc(db, "tasks", task.id);
+    await updateDoc(taskRef, { status: "completed" });
+    toast.success("Task marked as completed!");
+  }}
+  className="cursor-pointer"
+/>
               </TableCell>
               <TableCell>
                 <button
@@ -103,3 +107,4 @@ export function DataTable() {
 
   );
 }
+
