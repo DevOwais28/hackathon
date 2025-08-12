@@ -98,33 +98,36 @@ function Login() {
              document.getElementById('email').style.borderColor="red")
              } */}
             </div>
-             <div className="grid gap-2 relative">
-                <Label htmlFor="password">Password</Label>
-                <Link
-                  to="/forgetpassword"
-                  className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  Forgot password?
-                </Link>
-                <Input
-                  id="password"
-                  type={showPassword ? "text" : "password"}
-                  name="password"
-                  value={formik.values.password}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  style={{
-                    borderColor:
-                      formik.touched.password && formik.errors.password ? "red" : undefined,
-                  }}
-                />
-                <span
-                  onClick={togglePassword}
-                  className="absolute right-3 top-8 cursor-pointer text-gray-500 hover:text-black transition-all duration-200"
-                >
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                </span>
-              </div>
+            <div className="grid gap-2 relative">
+  <div className="flex justify-between items-center">
+    <Label htmlFor="password">Password</Label>
+    <Link
+      to="/forgetpassword"
+      className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+    >
+      Forgot password?
+    </Link>
+  </div>
+  <Input
+    id="password"
+    type={showPassword ? "text" : "password"}
+    name="password"
+    value={formik.values.password}
+    onChange={formik.handleChange}
+    onBlur={formik.handleBlur}
+    style={{
+      borderColor:
+        formik.touched.password && formik.errors.password ? "red" : undefined,
+    }}
+  />
+  <span
+    onClick={togglePassword}
+    className="absolute right-3 top-10 cursor-pointer text-gray-500 hover:text-black transition-all duration-200"
+  >
+    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+  </span>
+</div>
+
 
           </div>
         </form>
@@ -147,4 +150,5 @@ function Login() {
 
 
 export default Login
+
 
