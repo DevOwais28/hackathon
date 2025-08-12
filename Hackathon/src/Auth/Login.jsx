@@ -101,7 +101,7 @@ function Login() {
              <div className="grid gap-2 relative">
                 <Label htmlFor="password">Password</Label>
                 <Link
-                  to="/forget-password"
+                  to="/forgetpassword"
                   className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   Forgot password?
@@ -147,3 +147,4 @@ function Login() {
 
 
 export default Login
+
