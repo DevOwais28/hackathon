@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Auth/Login";
 import Signup from "./Auth/Signup.jsx";
-import Forgetpassword from "./Auth/ForgetPassword";
+import Forgetpassword from "./Auth/Forgetpassword";
 import App from "./App.jsx"
 import ProtectedRoutes from "./ProtectedRoutes.jsx";
 const Router = () => {
@@ -24,5 +24,6 @@ const Router = () => {
     </BrowserRouter>
   );
 }
+
 
 export default Router
