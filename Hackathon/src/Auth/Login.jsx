@@ -100,6 +100,12 @@ function Login() {
             </div>
              <div className="grid gap-2 relative">
                 <Label htmlFor="password">Password</Label>
+                <Link
+                  to="/forget-password"
+                  className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Forgot password?
+                </Link>
                 <Input
                   id="password"
                   type={showPassword ? "text" : "password"}
@@ -138,5 +144,6 @@ function Login() {
     </div>
   )
 }
+
 
 export default Login
